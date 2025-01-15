@@ -68,6 +68,18 @@ PORT=5000
       - Share it with the service account email (with editor permissions)
       - Copy the spreadsheet ID from the URL (the long string between /d/ and /edit)
    6. Update your `.env` file with the credentials from the JSON key file
+   7. Format your sheets with the following structure:
+      ```
+      Sheets Required:
+      1. Donations
+         - Columns: id, charityId, amount, date, isRecurring, frequency
+      2. Charities
+         - Columns: id, name, description, category, imageUrl, impact, totalRaised, goal, tags, causes
+      3. Users
+         - Columns: id, username, donations, totalDonated, impactMetrics, interests, preferredCauses, badges
+      4. Achievements
+         - Columns: id, name, description, icon, category, requirement
+      ```
 
 5. Set up the database:
 ```bash
